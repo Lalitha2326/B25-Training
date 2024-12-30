@@ -1,0 +1,226 @@
+Dictionary:
+===========
+
+  I. Introduction
+ II. Built-in methods for Dictionary(11)
+III. Dictionary Comprehensions
+
+***************************************************************************************************
+I. Introduction:
+----------------
+    - Dictionarys are mutable data structures.
+    - Dictionarys are mapping type.
+    - Dictionarys contain key, value pairs
+    - Dictionary keys should be unique immutable datatypes.
+    - Dictionary values are of any datatype.
+    - Dictionarys are represented using curly brackets - {}.
+    
+        - Checking Membership (in)
+        - len()
+        - min()
+        - max()
+
+    Note:
+    -----
+      Empty Dictionary - dct = {}
+
+***************************************************************************************************
+II. Built-in methods for Dictionary(11):
+-----------------------------------
+    dict functions(11):
+    -------------------
+
+      my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+      # 1. clear: Remove all items from the dictionary
+      ------------------------------------------------
+          my_dict.clear()
+          print("After clear:", my_dict)  # Output: {}
+
+          # Re-create the sample dictionary
+          my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+      # 2. copy: Create a shallow copy of the dictionary
+      --------------------------------------------------
+
+          copied_dict = my_dict.copy()
+          print("Copied dictionary:", copied_dict)  # Output: {'a': 1, 'b': 2, 'c': 3}
+
+      # 3. fromkeys: Create a new dictionary with specified keys and a default value
+      ------------------------------------------------------------------------------
+
+          new_dict = dict.fromkeys(['x', 'y', 'z'], 0)
+          print("Fromkeys result:", new_dict)  # Output: {'x': 0, 'y': 0, 'z': 0}
+
+      # 4. get: Retrieve the value for a given key, or a default value if the key is not present
+      -------------------------------------------------------------------------------------------
+
+          value_a = my_dict.get('a', 'Key not found')
+          value_d = my_dict.get('d', 'Key not found')
+          print("Value for 'a':", value_a)  # Output: 1
+          print("Value for 'd':", value_d)  # Output: Key not found
+
+      # 5. items: Return a view of all key-value pairs in the dictionary
+      ------------------------------------------------------------------
+
+          all_items = my_dict.items()
+          print("All items:", all_items)  # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+      # 6. keys: Return a view of all keys in the dictionary
+      -------------------------------------------------------
+
+          all_keys = my_dict.keys()
+          print("All keys:", all_keys)  # Output: dict_keys(['a', 'b', 'c'])
+
+      # 7. pop: Remove the item with the specified key and return its value
+      ---------------------------------------------------------------------
+
+          removed_value = my_dict.pop('b', 'Key not found')
+          print("Removed value for 'b':", removed_value)  # Output: 2
+          print("Updated dictionary:", my_dict)  # Output: {'a': 1, 'c': 3}
+
+      # 8. popitem: Remove and return an arbitrary key-value pair
+      -----------------------------------------------------------
+          removed_item = my_dict.popitem()
+          print("Removed item:", removed_item)  # Output: ('c', 3)
+          print("Updated dictionary:", my_dict)  # Output: {'a': 1}
+
+      # 9. setdefault: Return the value for a given key, or set a default value if the key is not present
+      ---------------------------------------------------------------------------------------------------
+
+          default_value = my_dict.setdefault('a', 10)
+          new_key_value = my_dict.setdefault('b', 20)
+          print("Default value for 'a':", default_value)  # Output: 1
+          print("New key-value for 'b':", new_key_value)  # Output: 20
+          print("Updated dictionary:", my_dict)  # Output: {'a': 1, 'b': 20}
+
+      # 10. update: Update the dictionary with key-value pairs from another dictionary or iterable
+      --------------------------------------------------------------------------------------------
+
+          update_dict = {'b': 2, 'c': 3, 'd': 4}
+          my_dict.update(update_dict)
+          print("Updated dictionary:", my_dict)  # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+      # 11. values: Return a view of all values in the dictionary
+      -----------------------------------------------------------
+
+          all_values = my_dict.values()
+          print("All values:", all_values)  # Output: dict_values([1, 2, 3, 4])
+
+  Convert various data types or data structures into dictionary:
+  --------------------------------------------------------------
+          --- dict() ---
+
+    Examples:
+    ---------
+        # List of tuples to dictionary
+        ------------------------------
+        list_of_tuples = [("a", 1), ("b", 2), ("c", 3)]
+        dict_from_list = dict(list_of_tuples)
+        print(dict_from_list)
+
+        # List of lists to dictionary
+        -----------------------------
+        list_of_lists = [["a", 1], ["b", 2], ["c", 3]]
+        dict_from_list = dict(list_of_lists)
+        print(dict_from_list)
+
+        # Two separate lists to dictionary
+        ----------------------------------
+        keys = ["a", "b", "c"]
+        values = [1, 2, 3]
+        dict_from_lists = dict(zip(keys, values))
+        print(dict_from_lists)
+
+        # Tuple of key-value pairs to dictionary
+        ----------------------------------------
+        tuple_of_pairs = (("a", 1), ("b", 2), ("c", 3))
+        dict_from_tuple = dict(tuple_of_pairs)
+        print(dict_from_tuple)
+
+        # JSON string to dictionary
+        ---------------------------
+        import json
+        json_string = '{"a": 1, "b": 2, "c": 3}'
+        dict_from_json = json.loads(json_string)
+        print(dict_from_json)
+        
+
+
+***************************************************************************************************
+
+III. Dictionary Comprehensions:
+------------------------------
+
+  - Dictionary comprehensions are similar to list comprehensions but create dictionaries.
+
+    syntax - {key_expression: value_expression for item in iterable if condition}
+
+    - key_expression   : The expression for the dictionary keys.
+    - value_expression : The expression for the dictionary values.
+    - item             : The variable representing each element in the iterable.
+    - iterable         : The iterable you are iterating over (e.g., a list, tuple, or string).
+    - condition        : An optional condition to filter the elements.
+
+
+    Example:
+    --------
+      # Creating a dictionary of squares using dictionary comprehension
+      squares_dict = {x: x**2 for x in range(5)}
+      print(squares_dict)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+      # using two lists
+
+      keys = ["a", "b", "c"]
+      values = [1, 2, 3]
+      dict_from_comprehension = {key: value for key, value in zip(keys, values)}
+      print(dict_from_comprehension)
+
+***************************************************************************************************
+
+  1. sum():
+  ---------
+    Calculates the sum of all elements in a Dictionary, set, tuple, List
+
+    Usage: sum(iterable, start=0)
+    ------------------------------
+      iterable : The iterable containing the elements to sum.
+      start    : (Optional) The value added to the sum of items in the iterable (defaults to 0).
+
+      Example:
+      --------
+        my_dict = {'a': 1, 'b': 2, 'c': 3}
+        total = sum(my_dict.values())
+        print(total)  # Output: 6 (1 + 2 + 3)
+
+  2. any():
+  ---------
+    any() returns True if at least one element is present.
+
+    Usage: any(iterable)
+    --------------------
+      iterable : The iterable to check.
+
+      Example:
+      -------
+      my_strings = ["", "Hello", "World", ""]
+      result = any(my_strings)
+      print(result)  # Output: True (At least one non-empty string is present)
+
+
+  3. all():
+  ---------
+    all() returns True if all elements are present.
+
+    Usage: all(iterable)
+    ---------------------
+    iterable: The iterable to check.
+
+    Example:
+    --------
+      my_list = ["", "", ""]
+      result = all(my_list)
+      print(result)  # Output: False
+
+  4. collections module
+  ---------------------

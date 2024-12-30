@@ -1,0 +1,91 @@
+5. Decision Making:
+===================
+
+  I. Introduction
+ II. 'if' 'elif' 'else'
+III. Examples
+
+***************************************************************************************************
+I. Introduction:
+----------------
+        - Decision Making is the process of executing different blocks of code based on certain conditions.  
+        - The constructs for decision making are 'if', 'elif' (else if), and 'else' statements. 
+        - These statements allow you to control the flow of execution based on the evaluation of specified conditions.
+        - The basic structure of a conditional statement involves checking a condition and 
+          executing a specific block of code if the condition is true. 
+
+***************************************************************************************************
+II. 'if' 'elif' 'else':
+-----------------------
+     1. if Statement:
+     ----------------
+        - The if statement is used to execute a block of code only if a specified condition is true.
+
+        - if condition:
+              Execute this block of code if condition is true
+
+
+     2. elif Statement:
+     ------------------
+        - The elif statement allows you to check multiple conditions after the initial if statement. 
+        - It is short for "else if" and is used to execute a block of code if the preceding conditions 
+          are false and the current condition is true.
+        - Can have multiple elif statements to check for additional conditions.
+
+
+
+            if condition1:
+                 Execute this block of code if condition1 is true
+            elif condition2:
+                 Execute this block of code if condition1 is false and condition2 is true
+
+
+
+     3. else Statement:
+     ------------------
+        - The else statement is used to execute a block of code if none of the preceding conditions 
+          in the 'if' and 'elif' statements are true. 
+        - It is optional and is typically used as a fallback when no other condition is met.
+
+
+            if condition1:
+                 Execute this block of code if condition1 is true
+            elif condition2:
+                 Execute this block of code if condition1 is false and condition2 is true
+            else:
+                 Execute this block of code if neither condition1 nor condition2 is true
+
+***************************************************************************************************
+III. Examples:
+--------------
+
+   Req: Check if a number is positive, negative, or zero
+
+        num = int(input("Enter number : "))
+
+        if num > 0:
+            print("Number is positive.")
+        elif num < 0:
+            print("Number is negative.")
+        else:
+            print("Number is zero.")
+
+
+  Req:  weekday weekend 
+        if weekday goto office if weekend party, trip, movie 
+        if party house party outdoor party 
+        if trip outstation trip or local trip 
+        if movie theatre or ott 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,244 @@
+1 Take values of length and breadth of a rectangle from user and check if it is square or not.
+
+length = int(input("enter rectangle  length value: "))
+breadth = int(input("enter rectangle  breadth value: "))
+if( length*breadth == length*length):
+      print("this is a square")
+else:
+      print("This is not square")
+===================================================================================
+2 Write a program to check whether a entered character is lowercase (a to z) or uppercase (A to Z).
+inp = input("enter a char: ")
+if inp.isupper():
+      print("inp is a uppercase")
+else:
+      print("inp is a lowercase")
+===================================================================================
+3 Write a program to get a number from the user and print whether it is positive or negative.
+inp=int(input("enter a value:"))
+print("inp")
+if(inp > 0):
+      print("no is positive")
+else:
+      print("num is negative")
+==============================================================================================
+4 Write a program that reads a floating-point number and prints "zero" if the number is zero. Otherwise, print "positive" or "negative". Add "small" if the absolute value of the number is less than 1, or "large" if it exceeds 1,000,000.
+
+n=float(input("enter a float value:"))
+if(n == 0 ):
+    print("zero")
+if(n >1):
+    print("positive")
+elif(n <1):
+    print("negative")
+if abs(n)<1:
+    print("small")
+if abs(n)>1000000:
+    print("large")
+==============================================================================================
+5 Write a program that takes a number from the user and generates an integer between 1 and 7. It displays the weekday name.
+if inp > 1 or inp < 7:
+    print("Enter a valid number between 1 to 7")
+if(inp == 1):
+    print("monday")
+if(inp == 2):
+    print("Tuesday")
+if (inp == 3):
+    print("Wednesday")
+if (inp == 4):
+    print("Thursday")
+if(inp == 5):
+    print("Friday")
+if(inp == 6):
+    print("Satursday")
+if(inp == 7):
+    print("sunday")
+=================================================================
+6.Write a program that requires the user to enter a single character from the alphabet. Print Vowel or Consonant, 
+depending on user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1, print an error message.
+
+ch= input("enter a character")
+vowels = ['a','e','i','o','u','A','E','I','O','U']
+if len(ch)!=1 or not ch.isalpha():
+    print("print error")
+elif ch in vowels:
+    print("vowels")
+else:
+    print("consonant")
+=====================================================================
+7 Write a program to display the cube of the given number up to an integer.
+n =int(input("Enter a number"))
+cube = n**3
+print("cube of the code:",cube)
+==================================================================
+8 Write a program that displays the sum of n odd natural numbers.
+
+def oddSum(n) :
+    sum = 0
+    curr = 1
+    i = 0
+    while i < n:
+        sum = sum + curr
+        curr = curr + 2
+        i = i + 1
+    return sum
+n =2
+print (" Sum of first Odd Numbers is: ",
+                                oddSum(n) )
+================================================================================
+9 Write a program that accepts three numbers from the user and prints "increasing" if the numbers are in increasing order, "decreasing"
+ if the numbers are in decreasing order, and "Neither increasing or decreasing order" otherwise
+
+n1 = int(input("Enter the numbers:"))
+n2 = int(input("Enter the numbers:"))
+n3 = int(input("Enter the numbers:"))
+if(n1 >n2 >n3):
+    print("increasing")
+elif(n1 < n2 < n3):
+    print("Decreasing")
+else:
+    print("Neither increasing nor decreasing")
+==================================================================================================
+10 Write a program that prompts the user to enter three names. Your program should display the names in descending order.
+
+n1 = input("Enter the name:")
+n2 = input("Enter the name:")
+n3 = input("Enter the name:")
+ls = [n1,n2,n3]
+ls.sort(reverse=True)
+print(ls)
+=====================================================================================================
+11 Write a program to calculate the monthly telephone bills as per the following rule: 
+Minimum Rs. 200 for up to 100 calls. 
+Plus Rs. 0.60 per call for next 50 calls. 
+Plus Rs. 0.50 per call for next 50 calls. 
+Plus Rs. 0.40 per call for any call beyond 200 calls.
+
+calls = int(input("how many calls you did :::::: "))
+if calls <= 100:
+    call_charges=200
+elif calls <= 150:
+    call_charges = 200+(calls-100)*0.60
+elif calls <= 200:
+    call_charges = 200 + 50*0.6 +(calls-150)*0.5
+elif calls >200:
+    call_charges = 200 + 50*0.6 + 50*0.5 +(calls-200)*0.40
+print(call_charges)
+==============================================================================================
+12 Write a program to determine whether the year is a leap year or not.
+
+year= int(input("enter the year:"))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("This is leap year")
+else:
+    print("This is not leap year")
+====================================================================
+13 Write a program that asks the user to enter 3 numbers in three variables and then displays the largest number
+
+n1 = int(input("Enter the number"))
+n2 = int(input("Enter the number"))
+n3 = int(input("Enter the number"))
+if(n1 >n2 and n1 > n3):
+    print("large number is:", n1)
+elif(n2 > n3 and n2 > n1):
+    print("large number is:", n2)
+else:
+    print("large number:", n3)
+==================================================================
+14 Write a program that asks the user to enter a number and displays whether entered number is an odd number or even number.
+n =int(input("Enter a number"))
+if(n % 2)== 0:
+    print("even number:",n)
+else:
+    print("odd number")
+===========================================================================
+15 A student will not be allowed to sit in exam if his/her attendance is less than 75%.
+Take following input from user
+Number of classes held
+Number of classes attended.
+And print
+percentage of class attended
+Is student is allowed to sit in exam or not.
+
+n1 = int(input("Enter the total number of classes held:"))
+n2 = int(input("Enter the number of classes attended"))
+percentage = n2 / n1 *100
+if(percentage < 75):
+    print("You are not allowed to sit in exam")
+else:
+    print("You are allowed to sit in exam")
+======================================================================================
+16 A school has following rules for grading system:
+a. Below 25 - F
+b. 25 to 45 - E
+c. 45 to 50 - D
+d. 50 to 60 - C
+e. 60 to 80 - B
+f. Above 80 - A
+Ask user to enter marks and print the corresponding grade.
+
+marks = int(input("Enter the marks:"))
+if( marks < 25):
+    print("Grade F")
+elif(marks >= 25 and marks < 45):
+    print("Grade E")
+elif(marks >= 45 and marks < 50):
+    print("Grade D")
+elif (marks >= 50 and  marks < 60):
+    print("Grade C")
+elif (marks >= 60 and marks < 80):
+    print("Grade B")
+elif(marks > 80) :
+    print("Grade A")
+else:
+    print("Enter valid marks:")
+===================================================
+17 A company decided to give bonus of 5% to employee if his/her year of service is more than 5 years.
+Ask user for their salary and year of service and print the net bonus amount.
+
+salary = float(input("enter salary:"))
+service = int(input("enter your  year of service:"))
+bonus = salary/100 *5
+if(service >= 5):
+    print("You get bonus of",bonus)
+else:
+    print("You didnt get any bonus of amount")
+===========================================================
+18 Create a program to check if a number is a perfect number.
+
+n1 = int(input("Enter a number:"))
+
+li_factors = []
+for num in range(1,n1):
+    if n1 % num == 0:
+       li_factors.append(num)
+
+perfect_sum = sum(li_factors)
+# perfect_sum = 0
+# for i in li:
+#     perfect_sum += i
+
+if perfect_sum == n1:
+    print("this is a perfect number")
+else:
+    print("this is not a perfect number")
+==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

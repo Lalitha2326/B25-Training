@@ -1,0 +1,172 @@
+7.0.1 Datastructures in Detail - String:
+========================================
+
+ String:
+ ------
+      - A string is a sequence of characters.
+      - Strings are treated as immutable.
+***************************************************************************************************
+ Memory Allocation in Strings:
+ -----------------------------
+      - Each character typically requires a certain number of bytes 
+       (e.g., ASCII characters usually take 1 byte per character, while Unicode characters might take more).
+       # https://python-reference.readthedocs.io/en/latest/docs/str/ASCII.html
+       # https://home.unicode.org/
+       # https://en.wikipedia.org/wiki/List_of_Unicode_characters
+
+      - Memory allocation for strings depends on the character encoding used (e.g., ASCII, Unicode).
+
+   - ASCII(128):
+      - ASCII (American Standard Code for Information Interchange):
+      - Uses 7 or 8 bits to represent each character.
+      - Commonly used in English and supports a limited character set.
+      - Requires less memory compared to Unicode.
+
+  - Unicode():
+    - Uses 16 or 32 bits to represent each character.
+    - Supports a broader range of characters, including international and special characters.
+    - Requires more memory compared to ASCII.
+    - 1F600   '😀'; GRINNING FACE
+      1F609   '😉'; WINKING FACE
+      265E    '♞'; BLACK CHESS KNIGHT
+
+***************************************************************************************************
+ Operations on Sequences:
+ ------------------------
+     String - List - Tuple
+
+     Indexing:
+     ---------
+        - Accessing an individual element in a sequence using its position.
+
+          my_string = "Hello, World!"
+          first_char = my_string[0]  # Access the first character
+          print(first_char)          # Output: H
+
+
+     Slicing:
+     --------
+        - Extracting a portion of a sequence by specifying a range.
+
+          my_string = "Hello, World!"
+          substring = my_string[7:12]  # Extract a portion of the string
+          print(substring)  # Output: World
+
+
+     Adding:
+     -------
+        - Concatenating two or more sequences together.
+
+          first_part = "Hello, "
+          second_part = "World!"
+          full_string = first_part + second_part  # Concatenate two strings
+          print(full_string)  # Output: Hello, World!
+
+     Multiplying:
+     ------------
+        - Replicating a sequence by a specified number of times.
+          original_string = "abc"
+          replicated_string = original_string * 3  # Replicate the string three times
+          print(replicated_string)                 # Output: abcabcabc
+
+     Checking for Membership:
+     -----------------------
+        - Verifying if a specific character/word is present in a sequence.
+
+          my_string = "Hello, World!"
+          check_result = "World" in my_string  # Check if "World" is present in the string
+          print(check_result)                  # Output: True
+
+     len():
+     ------
+        - Returns the length (number of elements) of a sequence.
+
+          my_string = "python string"
+          length_of_string = len(my_string)  # Get the length of the list
+          print(length_of_string)            # Output: 13
+
+     max():
+     ------
+        - Returns the maximum element in a sequence.
+
+          my_string = "python"
+          max_of_string = min(my_string)  # Get the max
+          print(max_of_string)            # Output: y
+
+     min():
+     ------
+        - Returns the minimum element in a sequence.
+
+          my_string = "python"
+          min_of_string = min(my_string)  # Get the min 
+          print(min_of_string)            # Output: h
+
+     Negative Indexing Mechanisms:
+     ----------------------------
+        - Allows accessing elements from the end of the sequence using negative indices.
+
+          my_string = "Hello, World"
+          last_char = my_string[-1]  # Access the last character using negative indexing
+          print(last_char)           # Output: d
+
+
+ Types of Formatting Strings:
+ ----------------------------
+    - Old Style Formatting:
+    -----------------------
+      
+        name = "John"
+        age = 30
+        print("Hello, my name is %s and my age is %s!" % (name, age))
+      
+    - New Style Formatting (str.format):
+    ------------------------------------
+        name = "John"
+        age = 15
+        print("Hello, my name is {} and my age is {}".format (name, age))
+
+    - f-strings:
+    ------------     
+        name = "John"
+        age = 15
+        print(f"Hello, my name is {name} and my age is {age}")
+
+***************************************************************************************************
+ String Functions(47):
+ ---------------------
+
+
+    +---------------+--------------+--------------+-------------+--------------+--------------+--------------+--------------+
+    | capitalize    | casefold     | center       | count       | encode       | endswith     | expandtabs   | join         |
+    | format        | format_map   | index        | isalnum     | isalpha      | isascii      | isdecimal    | replace      |
+    | isidentifier  | islower      | isnumeric    | isprintable | isspace      | istitle      | isupper      | splitlines   |
+    | ljust         | lower        | lstrip       | maketrans   | partition    | removeprefix | removesuffix | isdigit      |
+    | rfind         | rindex       | rjust        | rpartition  | rsplit       | rstrip       | split        | splitlines   |
+    | startswith    | strip        | swapcase     | title       | translate    | upper        | find         | zfill        |
+    | removesuffix  |              |              |             |              |              |              |              |
+    +---------------+--------------+--------------+-------------+--------------+--------------+--------------+--------------+
+
+  - upper() and lower(): Convert string to uppercase or lowercase.
+  - strip(), lstrip(), rstrip(): Remove leading and trailing whitespaces.
+  - find(), index(): Locate a substring within a string.
+  - replace(): Replace occurrences of a substring with another.
+  - count(): Count occurrences of a substring.
+  - startswith() and endswith(): Check if a string starts or ends with a specific substring.
+  - split(): Split a string into a list of substrings based on a delimiter.
+  - join(): Concatenate a list of strings into one string using a specified delimiter.
+
+Convert various data types or data structures into string
+---------------------------------------------------------
+       --- str() ---
+
+
+Note:
+-----
+
+\t for a tab
+\n for a newline
+\\ for a backslash
+\" for a double quote
+\' for a single quote
+
+***************************************************************************************************

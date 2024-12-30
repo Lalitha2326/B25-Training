@@ -1,0 +1,29 @@
+List:
+-----
+
+1. What is use of list. Explain different use cases of List
+2. Sequence operations on List
+3. Characteristics(Properties) of List
+4. CRUD operations on List
+5. Memory allocation of List
+6. Write all possible combinations of list structure(homo,hetero with all data types, data structures)
+7. Explain about each method of List
+    append:
+    pop:
+    ....
+8. shallow copy vs deep copy 
+9. append vs extend
+10. pop vs remove
+11. Pass by value vs Pass by reference
+
+Tuple:
+------
+1. What is use of Tuple. Explain different use cases of Tuple
+2. Sequence operations on Tuple
+3. Characteristics(Properties) of Tuple
+4. CRUD operations on Tuple
+5. Memory allocation of Tuple
+6. Write all possible combinations of Tuple structure(homo,hetero with all data types, data structures)
+7. Explain about each function of Tuple
+8. shallow copy vs deep copy in tuple.
+9. list vs tuple ( Min. 4 differences in detail)

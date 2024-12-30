@@ -1,0 +1,24 @@
+1.Length of string
+
+ls = "python"
+print(len(ls))
+***************************************
+2.Count characters in string
+n = "pythonnn"
+print(n.count('n'))
+# *******************************************
+3.String slicing
+
+n = "python,world"
+print(n[2:9])
+***************************************************************
+4.Replace first occurance character
+
+s = 'hello lalitha'
+print(s.replace('hello' , 'mani'))
+*********************************************************************
+5.Swapping chars in string
+
+s = 'python'
+print(s.swapcase())
+***************************************************************

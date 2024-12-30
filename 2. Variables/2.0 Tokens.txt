@@ -1,0 +1,83 @@
+2.0 Tokens:
+===========
+ I. Introduction
+II. Different types of tokens
+
+
+***************************************************************************************************
+I. Introduction:
+----------------
+      - Token is the smallest unit in a program. 
+      - The Python interpreter uses tokens to recognize and parse the source code.
+      - The interpreter uses these tokens to understand and execute the code provided. 
+      - There are several types of tokens in Python, each serving a different purpose.
+
+***************************************************************************************************
+II. Different types of tokens:
+------------------------------
+
+   a. Keywords:
+   ------------
+      - Keywords are reserved words that have a special meaning in Python. 
+      - They cannot be used as variable names. 
+            Examples `if`, `else`, `while`, `for`, `def`, `class`, etc.
+
+   b. Identifiers:
+   ---------------
+      - Identifiers are used as names for variables, functions, classes, etc. 
+      - An identifier must start with a letter or an underscore, followed by letters, digits, or underscores.
+
+         variable_name = 42
+         _name = "python"
+      
+
+   c. Literals:
+   ------------
+      - Literals are constant values used in Python. 
+      - There are different types of literals, such as numeric literals, string literals, and boolean literals.
+      
+         integer_literal = 42
+         string_literal = "Hello, World!"
+         boolean_literal = True
+         
+
+   d. Operators:
+   -------------
+      - Operators perform operations on variables and values. 
+            Examples: arithmetic operators (`+`, `-`, ``, `/`) 
+                      comparison operators (`==`, `!=`, `<`, `>`)
+                      logical operators (`and`, `or`, `not`).
+      
+
+   e. Delimiters:
+   --------------
+      - Delimiters are characters used to define the structure of the code, 
+        such as parentheses `()`, brackets `[]`, and curly braces `{}`.
+
+         my_list = [1, 2, 3]
+      
+
+   f. Comments:
+   ------------
+      - Comments are annotations in the code that are ignored by the interpreter. 
+      - They start with the `#` symbol and are used for documentation and clarification.
+
+         # This is a comment
+      
+
+   g. Strings:
+   -----------
+      - Strings are sequences of characters enclosed in single (`'`) or double (`"`) quotes or triple qoutes (`'''` or `"""`).
+      
+         message = "Hello, Python!"
+      
+
+   h. Whitespace:
+   --------------
+      - Whitespace includes spaces, tabs, and line breaks. 
+      - It is used to separate tokens and make the code readable.
+
+         def my_function():
+             print("Hello")
+      
+

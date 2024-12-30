@@ -1,0 +1,106 @@
+List:
+=====
+
+  I. Introduction
+ II. Built-in methods for lists(11)
+III. List Comprehensions
+
+***************************************************************************************************
+I. Introduction:
+----------------
+    - Lists are mutable data structures.
+    - Lists are ordered/sequential collections.
+    - Lists can contain both homogeneous and heterogeneous data.
+    - Lists are represented using square brackets - [].
+    
+        - Indexing - (positve and negative)
+        - Slicing
+        - Concatenating (adding)
+        - Multiplying (with integer)
+        - Checking Membership (in)
+        - len()
+        - min()
+        - max()
+
+***************************************************************************************************
+II. Built-in methods for lists(11):
+-----------------------------------
+
+    - "append()", "clear()", "copy()", "count()", "extend()", "index()", "insert()", 
+       "pop()", "remove()", "reverse()", "sort()"
+
+        # Sample list
+        sample_list = [1, 2, 3, 4, 3, 5]
+
+        # append: Add an element to the end of the list
+        sample_list.append(6)
+        print(f"append: {sample_list}")
+
+        # clear: Remove all elements from the list
+        sample_list.clear()
+        print(f"clear: {sample_list}")
+
+        # copy: Create a shallow copy of the list
+        original_list = [1, 2, 3]
+        copied_list = original_list.copy()
+        print(f"copy: {copied_list}")
+
+        # count: Count the occurrences of an element in the list
+        count_occurrences = sample_list.count(3)
+        print(f"count: {count_occurrences}")
+
+        # extend: Extend the list by appending elements from an iterable
+        sample_list.extend([4, 5, 6])
+        print(f"extend: {sample_list}")
+
+        # index: Return the index of the first occurrence of an element
+        index_result = sample_list.index(4)
+        print(f"index: {index_result}")
+
+        # insert: Insert an element at a specified position in the list
+        sample_list.insert(1, 10)
+        print(f"insert: {sample_list}")
+
+        # pop: Remove and return the last element from the list
+        popped_element = sample_list.pop()
+        print(f"pop: {popped_element}, {sample_list}")
+
+        # remove: Remove the first occurrence of a specified element
+        sample_list.remove(4)
+        print(f"remove: {sample_list}")
+
+        # reverse: Reverse the elements of the list in place
+        sample_list.reverse()
+        print(f"reverse: {sample_list}")
+
+        # sort: Sort the elements of the list in ascending order, Modifies Original List, Returns None
+        sample_list.sort()
+        print(f"sort: {sample_list}")
+       
+        # sorted: Creates a New Sorted List, Does Not Modify Original list, Returns a Sorted List
+        numbers = [3, 1, 4, 1, 5, 9, 2]
+        sorted_numbers = sorted(numbers)
+        print(sorted_numbers)           # Output: [1, 1, 2, 3, 4, 5, 9]
+        print(numbers)                  # Output: [3, 1, 4, 1, 5, 9, 2] (original list is not modified)
+
+***************************************************************************************************
+III. List Comprehensions:
+-------------------------
+
+    - List comprehensions provide a concise way to create lists. 
+    - They consist of an expression followed by at least one 'for' clause and zero or more 'if' clauses.
+
+
+        syntax - [expression for item in iterable if condition]
+
+
+        - expression : The operation to perform on each item.
+        - item       : The variable representing each element in the iterable.
+        - iterable   : The iterable you are iterating over (e.g., a list, tuple, or string).
+        - condition  : An optional condition to filter the elements.
+
+        Example:
+        --------
+        # Squares of numbers from 0 to 4 using list comprehension
+        squares = [x**2 for x in range(5)]
+        print(squares)  # Output: [0, 1, 4, 9, 16]

@@ -1,0 +1,276 @@
+4.Datatypes/Structures Introduction:
+====================================
+  I. Requirement
+ II. Input function
+III. Data Types
+ IV. Data Structures
+  V. Type Conversions
+ VI. Range
+
+***************************************************************************************************
+I. Requirement:
+---------------
+   Entity    : Noun Form
+   State     : Datatype/Structures 
+   Behaviour : Operation      : CRUD
+               Validations    : Client/Server 
+               Business logic : operators, DM, Loops
+
+   x = 10 # perform CRUD operations
+
+   # CRUD
+
+   # x = 10
+   # print(x)
+   # x += 5
+   # del x
+
+
+   # print()
+   # type()
+   # id()
+   # input()
+
+***************************************************************************************************
+II. Input function:
+------------------
+
+   Basic input example
+   -------------------
+   user_input = input("Enter your name: ")
+   print(user_input)
+
+   Input for numerical values
+   --------------------------
+   user_age = int(input("Enter age: "))
+   print("You are " + str(age) + " years old.")
+   print(type(user_age))
+
+
+   Handling multiple inputs
+   ------------------------
+   name = input("Enter your name: ")
+   age = int(input("Enter your age: "))
+   print("Hello, " + name + "! You are " + str(age) + " years old.")
+
+***************************************************************************************************
+
+III. Data Types:
+----------------
+
+   1. Numeric Types:
+   ----------------
+      - int     : Integer type, representing integer numbers.
+      - float   : Floating-point type, representing decimal numbers.
+      - complex : Complex number type, with real and imaginary parts.
+
+      Example:
+      
+      x = 5          int
+      y = 3.14       float
+      z = 2 + 3j     complex
+      
+
+   2. Text Type:
+   --------------
+      - str: String type, representing sequences of characters.
+
+      Example:
+      
+      text = "Hello"
+      
+
+   3. Sequence Types:
+   ------------------
+      - list  : Ordered, mutable sequence.
+      - tuple : Ordered, immutable sequence.
+      - range : Represents a range of numbers.
+
+
+
+      Example:
+      
+      my_list = [1, 2, 3]
+      my_tuple = (4, 5, 6)
+      my_range = range(0, 5)
+      
+
+   4. Set Types:
+   -------------
+      - set       : Unordered, mutable collection of unique elements.
+      - frozenset : Unordered, immutable collection of unique elements.
+
+      Example:
+      
+      my_set = {1, 2, 3}
+      my_frozenset = frozenset({4, 5, 6})
+      
+
+   5. Mapping Type:
+   ----------------
+      - dict: A collection of key-value pairs.
+
+      Example:
+      
+      my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+      
+
+   6. Boolean Type:
+   ----------------
+      - bool: Represents Boolean values (True or False).
+
+      Example:
+      
+      is_true = True
+      is_false = False
+      
+
+   7. None Type:
+   -------------
+      - None: Represents the absence of a value or a null value.
+
+      Example:
+      
+      no_value = None
+      
+***************************************************************************************************
+   IV. Data Structures:
+   --------------------
+
+   1. Lists:
+   ---------
+      - Ordered, mutable sequences. 
+      - Elements can be added, removed, or modified.
+
+      Example:
+      
+      my_list = [1, 2, 3, 4, 5]
+      
+
+   2. Tuples:
+   ----------
+      - Ordered, immutable sequences. 
+      - Elements cannot be modified once defined.
+
+      Example:
+      
+      my_tuple = (1, 2, 3, 4, 5)
+      
+
+   3. Sets:
+   --------
+      - Unordered, mutable collections of unique elements. 
+      - Useful for performing set operations.
+
+      Example:
+      
+      my_set = {1, 2, 3, 4, 5}
+      
+
+   4. Dictionaries:
+   ----------------
+      - Orderd(from 3.7 version) collections of key-value pairs. 
+      - Allows efficient lookup based on keys.
+
+      Example:
+      
+      my_dict = {'name': 'Alice', 'age': 30, 'city': 'London'}
+      print(my_dict['name'])
+      print(my_dict.get('name'))
+
+      
+
+   5. Strings:
+   -----------
+      - Sequences of characters. Immutable.
+
+      Example:
+      
+      my_string = "Hello, World!"
+      
+
+   6. Arrays (from array module):
+   ------------------------------
+      - Homogeneous, fixed-size sequences. Elements must be of the same type.
+
+      Example:
+      
+      from array import array
+      my_array = array('i', [1, 2, 3, 4, 5])   'i' denotes integer type
+   
+***************************************************************************************************
+V. Type Conversions:
+--------------------
+
+   1. Integer to Float:
+   --------------------
+      You can convert an integer to a float using the float() function:
+
+      
+      integer_value = 5
+      float_value = float(integer_value)
+      
+
+   2. String to Integer or Float:
+   -------------------------------
+      To convert a string to an integer or float, you can use int() or float():
+
+      
+      string_number = "10"
+      integer_number = int(string_number)
+      float_number = float(string_number)
+      
+
+      - Note that if the string contains non-numeric characters, a ValueError will be raised.
+
+   3. Number to String:
+   ---------------------
+      You can convert a number to a string using the str() function:
+
+      
+      number = 42
+      string_representation = str(number)
+      
+
+   4. String to Boolean:
+   ---------------------
+      You can convert a string to a boolean using conditions. 
+      For example, an empty string or "False" (case-insensitive) will be converted to False, 
+      and any other non-empty string will be converted to True:
+
+      
+      tr_string = "True"
+      boolean_value = bool(tr_string)
+      
+
+   5. Boolean to String:
+   ---------------------
+      You can convert a boolean to a string using str():
+
+      
+      boolean_value = True
+      string_representation = str(boolean_value)
+      
+
+   6. Float to Integer:
+   --------------------
+      You can convert a float to an integer using int(). Note that this will truncate the decimal part:
+
+      
+      float_number = 3.14
+      integer_number = int(float_number)
+   
+
+***************************************************************************************************
+VI. range:
+----------                                
+   # for each in range(1, 10): # range(start, stop, step)
+   #                           # start(optional) : if start is not provided then starts from zero
+   #                           # stop(mandatory) : if n is the stop provided then upto n-1
+   #                           # step(optional)  : how many places to skip 
+   #     print(each)
+
+
+***************************************************************************************************
+
+

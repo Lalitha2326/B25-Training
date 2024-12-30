@@ -1,0 +1,142 @@
+1.Print numbers from 1 to 10 using a for loop
+s = range(1, 10)
+for each in s:
+     print(each)
+=====================================================
+2.print all numbers 1 to 100
+
+s=range(1,100)
+for each in s:
+    print(each)
+=================================================
+3.print all even numbers between 1 to 100
+
+for num in range(1, 100 + 1):
+
+    # checking condition
+    if num % 2 == 0:
+        print(num, end=" ")
+========================================================
+4.print odd numbers between 1 to 100
+
+for num in range(1 ,100, 2):
+    print(num,end='')
+================================================================
+5.print all prime numbers
+
+lower = 1
+upper = 100
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+=============================================================================
+6. Print numbers with power of 2 (1 2 4 8 16 32 64)
+for exp in range(8):
+    print(2**exp)
+===============================================================================
+7.Print all numbers which are divisible by 5 and 7 
+n = 100
+for each in range(n):
+   if(each % 5== 0 and each % 7==0):
+           print(each)
+=========================================================================
+8.Print all numbers which are divisible by 4 or 6
+n = 100
+for each in range(n):
+        if (each % 4==0 or each % 6 ==0):
+                print(each)
+===========================================================================
+9.Print first 14 odd numbers 
+n = 30
+for each in range(n):
+        if(each % 2 !=0):
+                print(each)
+==================================================================
+10.print first 23 odd number
+n = 40
+for each in range(n):
+        if(each % 2 == 0):
+                print(each)
+=============================================================
+11.Print first 6 numbers which are divisible by 4 and 6
+
+n = 70
+for each in range(n):
+        if(each % 4== 0 and each % 6==0):
+                print(each)
+========================================================
+12.Print all numbers except divisible by 9
+n = 100
+for each in range(n):
+        if( each % 9 !=0):
+                print(each)
+========================================================
+13. Write for loop to explain all data structures.
+list = [1,2,3,4]
+for each in list:
+        print(each)
+tuple = (1,2),(2,3),(4,5)
+for each in tuple:
+        print(each)
+set ={6,7,8,9}
+for each in set:
+        print(each)
+dict = {"abc":123,"def":456}
+for each in dict:
+        print(each)
+string = "hello"
+for each in string:
+        print(each)
+===================================================================
+2.Calculate the sum of numbers from 1 to 10 using a for loop
+sum = 0
+for i in range(1,11):
+        sum += i
+print(sum)
+=======================================================================
+3.Calculate the product of elements in a list using a for loop
+
+list = [1,2,3,4]
+i = 1
+for each in list:
+        i = i*each
+print(i)
+==========================================================================
+4.Print characters of a string using a for loop
+char = "lalitha"
+for each in char:
+        print(each)
+====================================================================
+5.Find the largest number in a list using a for loop
+a = [10, 24, 76, 23, 12]
+largest = a[0]
+for val in a:
+    if val > largest:
+            largest = val
+print(largest)
+===================================================================
+6.Find the average of numbers in a list using a for loop 
+list = [1,2,3,4,5,6]
+total_sum = 0
+for each in list:
+    total_sum +=each
+    avg = total_sum/len(list)
+print(avg)
+=======================================================================
+8.Calculate factorial of a number using a while loop  
+n = int(input("enter a number"))
+fact = 1
+while n > 1:
+    fact *=n
+    n -= 1
+print('factorial:',fact)
+========================================================================
+9.Find the first occurrence of a number in a list using a while loop             
+

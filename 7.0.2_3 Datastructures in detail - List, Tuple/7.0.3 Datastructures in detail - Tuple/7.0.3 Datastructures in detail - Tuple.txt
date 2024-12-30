@@ -1,0 +1,51 @@
+Tuple:
+======
+
+  I. Introduction
+ II. Built-in methods for Tuples(02)
+***************************************************************************************************
+I. Introduction:
+----------------
+    - Tuples are immutable data structures.
+    - Tuples are ordered/sequential collections.
+    - Tuples can contain both homogeneous and heterogeneous data.
+    - Tuples are represented using paranthesis - ().
+    
+        - Indexing - (positve and negative)
+        - Slicing
+        - Concatenating (adding)
+        - Multiplying (with integer)
+        - Checking Membership (in)
+        - len()
+        - min()
+        - max()
+    Note:
+	----
+	Empty tuple          - ()
+	Single element tuple - (element,)
+
+
+***************************************************************************************************
+
+ II. Built-in methods for Tuples(02)
+------------------------------------
+
+      # count - Returns the number of occurrences of a specified value in the tuple.
+
+      my_tuple = (1, 2, 2, 3, 2, 4)
+      occurrences_of_2 = my_tuple.count(2)
+      print(occurrences_of_2)  # Output: 3
+
+      # index - Returns the index of the first occurrence of a specified value in the tuple.
+
+      my_tuple = (1, 2, 3, 4, 5)
+      index_of_3 = my_tuple.index(3)
+      print(index_of_3)  # Output: 2
+
+  Convert various data types or data structures into tuple
+  --------------------------------------------------------
+        --- tuple() ----
+
+
+
+***************************************************************************************************

@@ -1,0 +1,147 @@
+2.1. Variables:
+===============
+
+  I. Introduction
+ II. Rules for naming a variable
+III. Keywords
+ IV. LEGB Rule
+
+***************************************************************************************************
+I. Introduction:
+----------------
+
+	- It is a reserved memory location that stores and manipulates data.
+
+	- Variables are entities of a program that holds a value.
+
+	- Variable is essentially a name assigned to a value or an object, 
+	  allowing you to reference and work with that value or object throughout your program.
+
+	- Variables should be meaniningful for readability.
+
+    - Assign a value to a variable using the assignment operator (=)  
+      x = 10
+      name = "Python"
+
+    - To display the value of a variable use the print function   
+      name = "Python"
+      print(name)
+
+
+    - We can change the value of a variable by assigning a new value to it
+      x = 10
+      x = 20
+      x = "Python"
+      x = [4, 7, 9]
+
+    - We can assign multiple variables in a single line:
+      x, y, z = 10, "Python", [2, 'hello', 5.6]
+
+
+***************************************************************************************************
+II. Rules for naming a variable:
+--------------------------------
+
+	- A variable name must begin with a letter of the alphabet(a-z, A-Z) or an underscore(_)
+	- The first character can be followed by letters, numbers or underscores.
+	- Python variable names are case sensitive.
+	- Reserved words cannot be used as variable names.
+
+
+  
+  | Case Name            | Example       | Use Case                                                                                        |
+  |----------------------|---------------|-------------------------------------------------------------------------------------------------|
+  | Snake Case           | user_name     | Variables, Function names (e.g., def calculate_total():)                                        |
+  | Pascal Case          | UserName      | Class names (e.g., class UserProfile:)                                                          |
+  | Screaming Snake Case | USER_NAME     | Constants (e.g., MAX_CONNECTIONS = 100)                                                         |
+  | Upper Case           | USERNAME      | Similar to Screaming Snake Case, used for constants but less common in multi-word constants.    |
+  | Flat Case            | username      | Used for variables, typically for single-word names.                                            |
+
+***************************************************************************************************
+III. Keywords:
+--------------
+  -  keywords are reserved words that have special meanings and cannot be used as identifiers 
+     (such as variable names, function names, or class names). 
+  -  These keywords are an integral part of the language's syntax and play specific roles 
+     in defining the structure and logic of Python code. 
+  -  Python has a set of standard keywords, and their usage is predefined by the language. 
+  -  Keywords cannot be used as variable names, as they are already reserved.
+  -  There are 35 keywords in Python.
+
+     False      class      finally    is         return
+     None       continue   for        lambda     try
+     True       def        from       nonlocal   while
+     and        del        global     not        with
+     as         elif       if         or         yield
+     assert     else       import     pass       break
+     except     in         raise      async      await
+
+
+***************************************************************************************************
+
+IV. LEGB Rule:
+--------------
+
+  - The LEGB rule defines the order in which Python looks for variable names in different scopes. 
+  - The acronym LEGB stands for Local, Enclosing, Global, and Built-in.
+  - Python searches for variable names in LEGB order
+  - To avoid naming conflicts and ensuring that variables are accessed in the intended scope.
+
+  1. Local Scope (L):
+  -------------------
+   - Variables defined within a function are in the local scope.
+   - Local variables are accessible only within the function where they are defined.
+   - Example:
+     python
+
+     def my_function():
+         local_variable = 10
+         print(local_variable)
+
+     my_function()  # Accessing local_variable is valid here
+     
+
+  2. Enclosing Scope (E):
+  -----------------------
+     - Refers to the scope of the enclosing function (for nested functions).
+     - If a variable is not found in the local scope, Python looks in the enclosing scope.
+     - Example:
+       python
+
+       def outer_function():
+           outer_variable = 20
+
+           def inner_function():
+  	     
+               print(outer_variable)  # Accessing outer_variable from the enclosing scope
+
+           inner_function()
+
+       outer_function()
+       
+
+  3. Global Scope (G):
+  --------------------
+     - Variables defined at the top level of a module or script are in the global scope.
+     - Global variables are accessible throughout the module or script.
+     - Example:
+       python
+
+       global_variable = 30
+
+       def another_function():
+           print(global_variable)  # Accessing global_variable from the global scope
+
+       another_function()
+       
+
+  4. Built-in Scope (B):
+  ----------------------
+     - This is the broadest scope and includes built-in names and functions provided by Python (e.g., print, len, sum).
+     - Variables in the built-in scope are accessible from any part of the program.
+     - Example:
+       python
+       print(len([1, 2, 3]))  # Accessing the built-in function len()
+
+
+       

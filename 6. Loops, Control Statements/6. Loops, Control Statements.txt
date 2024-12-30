@@ -1,0 +1,168 @@
+6. LOOPS, Control Statements:
+=============================
+
+  I. Introduction
+ II. for loop
+III. while loop 
+ IV. Control Statements
+
+***************************************************************************************************
+I. Introduction:
+----------------
+		- Loops are used to repeatedly execute a block of code until a specified condition is met. 
+
+		- Loops are essential for automating repetitive tasks and iterating over collections of data.
+
+		- Loops are required for
+			- Automation        : Loops help automate repetitive tasks by executing a block of code 
+			                      multiple times without the need to write the same code over and over.
+			- Iteration         : Loops are crucial for iterating over elements in a sequence or 
+			                      processing elements in a collection one by one.
+			- Dynamic Execution : Loops allow for dynamic execution based on changing conditions, 
+			                      providing flexibility in program control flow.
+
+		- Loops can be applied to various data types and data structures:
+			- Lists          : Iterating over elements of a list
+			- Strings        : Processing characters of a string
+			- Tuples         : Iterating over elements of a tuple
+			- Ranges         : Generating a sequence of numbers using the range function
+			- Dictionaries   : Iterating over keys, values, or items in a dictionary
+			- Sets           : Looping through elements in a set
+			- Files          : Reading lines from a file
+			- Custom Objects : If an object supports iteration (by implementing __iter__ and __next__ methods)
+
+		- There are two main types of loops in Python
+		 	- for loops 
+		 	- while loops
+
+***************************************************************************************************
+
+II. for loop
+------------
+
+		- 'for' loop is used to iterate over a sequence (such as a list, tuple, string, range) 
+		  or set or dictionary and execute a block of code for each item in the sequence.
+		- for iterating over elements in sequences or set or dictionary keys, 
+		  'for' loops are often more concise and expressive
+
+		  Example:
+		  --------
+		  		for each in sequence/set:
+		  			 # code to be executed for each item in the sequence
+
+		  		fruits = ["apple", "banana", "cherry"]
+				  for fruit in fruits:
+    			    print(fruit)
+
+
+***************************************************************************************************
+III. while loop
+----------------
+		- while loop is used to repeatedly execute a block of code as long as a specified condition is true.
+		- while loops are better suited for situations where 
+		  you don't know the exact number of iterations beforehand, 
+		  and the loop continues as long as a specified condition is true
+		- while loop might be more appropriate on below scenarios
+
+	      	- Unknown Iteration Count : When you don't know in advance how many iterations are needed
+	      	- Conditional Iteration   : If you need to iterate based on a condition other than 
+	      	                            the natural order of elements in a sequence
+	      				
+
+		  Example:
+		  --------
+		  		while condition:
+    				# code to be executed while the condition is true
+
+    			
+	    		# Factorial Calculation
+	    		#-----------------------
+	    		num = int(input("Enter a number: "))
+	    		given_num = num
+					result = 1
+
+					while num > 1:
+					    result *= num
+					    num -= 1
+
+					print(f"Factorial of given number {given_num} is:", result)
+
+
+					# Guessing Game with Break
+					#-------------------------
+
+					secret_number = 3
+
+					while True:
+					    guess = int(input("Guess the number b/w 0 to 9: "))
+					    if guess == secret_number:
+					        print("Congratulations! You guessed the correct number.")
+					        break
+					    else:
+					        print("Try again.")
+
+					# Fibonacci
+					#-----------
+					n = int(input("Enter the number of terms: "))
+					a, b = 0, 1
+					count = 0
+
+					while count < n:
+					    print(a)
+					    nth = a + b
+					    a = b
+					    b = nth
+					    count += 1
+
+
+***************************************************************************************************
+IV. Control Statements:
+-----------------------
+		- break, continue, and pass are special control statements that are used within loops to modify their behavior. 
+		- They provide additional flexibility and control over the flow of execution in loops.
+
+		  break Statement:
+      ----------------
+				- The break statement is used to exit a loop prematurely based on when a specific condition is met. 
+				- Breaking out of a loop when a target value is found or when further iterations are unnecessary.
+				- Avoiding the execution of certain code for particular cases
+
+					Example:
+					--------
+
+					for i in range(5):
+					    if i == 3:
+					        break
+					    print(i)
+
+			continue Statement:
+      -------------------
+				- The continue statement is used to skip specific iterations based on a condition.
+				- It allows to skip certain iterations based on when a specific condition is met.
+				- Skipping certain iterations based on a condition without terminating the entire loop.
+
+					Example:
+		      --------
+				
+					for i in range(5):
+					    if i == 2:
+					        continue
+					    print(i)
+			
+			pass Statement:
+      ---------------
+				- The pass statement is a no-op statement, meaning it does nothing. 
+				- When a syntactically required statement is needed but no action is necessary.
+				- Placeholder for future code implementation.
+				- Ensuring that an empty block of code is syntactically valid.
+
+
+
+					Example:
+	        --------
+					for i in range(3):
+					    if i == 1:
+					        pass
+					    else:
+					        print(i)
+				

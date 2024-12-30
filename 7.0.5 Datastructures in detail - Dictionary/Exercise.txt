@@ -1,0 +1,6 @@
+1. Dictionary realtime usage scenarios
+2. Properties of Dictionary. Explain in detail 
+3. Dictionary methods 
+4. Dictionary is mutable or immutable.Why 
+5. Explain all dictionary builtin methods
+6. Hashing algorithm in dictionary 

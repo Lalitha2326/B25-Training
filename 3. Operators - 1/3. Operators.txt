@@ -1,0 +1,356 @@
+3. Operators:
+=============
+
+  I. Introduction
+ II. Different Operators Explanation
+III. Operators precedence
+
+
+***************************************************************************************************
+
+I. Introduction
+----------------
+
+	- Operators in Python are special symbols or keywords that facilitate operations on variables and values. 
+	- They allow you to manipulate data, perform mathematical calculations, compare values, logical operations, 
+	  bitwise operations and control the flow of your program. 
+	- Python operators are divided into several types, each serves a distinct purpose.
+
+	- Arithmetic Operators
+	- Comparison Operators
+	- Logical Operators
+	- Membership operators
+	- Assignment operators
+	- Identity operators
+  - Bitwise Operators
+
+***************************************************************************************************
+II. Different Operators Explanation
+-----------------------------------
+
+	a. Arithmetic Operators:
+	------------------------
+		- Arithmetic operators are used for mathematical calculations.
+			
+
+		 1. Addition
+		 -----------
+		    a = 10
+		    b = 5
+		    sum_result = a + b
+		    print("Sum:", sum_result)
+
+		 2. Subtraction
+		 --------------
+		    a = 10
+	 	    b = 5
+
+			diff_result = a - b
+			print("Difference:", diff_result)
+
+		 3. Multiplication
+		 ----------------
+			a = 10
+			b = 5
+
+			prod_result = a * b
+			print("Product:", prod_result)
+
+		 4. Division
+		 -----------
+			a = 10
+			b = 5
+
+			div_result = a / b
+			print("Quotient:", div_result)
+
+		 5. Modulus (remainder)
+		 ----------------------
+			a = 10
+			b = 5
+
+			mod_result = a % b
+			print("Remainder:", mod_result)
+
+		 6. Exponentiation
+		 -----------------
+			a = 10
+			b = 5
+
+			exp_result = a ** b
+			print("Exponentiation:", exp_result)
+
+		 7. Floor Division
+		 -----------------
+			a = 10
+			b = 5
+
+			result = a // b
+	        print("Floor Division:", result)
+
+
+	b. Comparison Operators:
+	------------------------
+		- Comparison operators are used to compare values and returns boolean values
+		
+
+		 1. Equal to ( == )
+		 ------------------
+		 	x = 10
+		 	y = 5 
+			print(x == y)   
+
+		 2. Not equal to ( != )
+		 ----------------------
+		 	x = 10
+		 	y = 5 
+
+			print(x != y)   
+
+		 3. Greater than ( > )
+		 ---------------------
+		 	x = 10
+		 	y = 5 
+
+			print(x > y)
+
+
+		 4. Less than ( < )
+		 ------------------
+		 	x = 10
+		 	y = 5 
+
+			print(x < y)
+
+		 5. Greater than or equal to ( >= )
+		 ----------------------------------
+		 	x = 10
+		 	y = 5 
+
+			print(x >= y)   True
+
+		 6. Less than or equal to ( <= )
+		 -------------------------------
+		 	x = 10
+		 	y = 5 
+
+			print(x <= y)
+
+
+	c. Logical Operators:
+	---------------------
+		- Logical operators perform logical operations on boolean values.
+
+
+		 1. Logical AND ( and )
+		 ----------------------
+		 	p = True
+			q = False
+
+		    print(p and q)   
+
+		 2. Logical OR ( or )
+		 --------------------
+		    p = True
+			q = False
+			print(p or q)    
+
+		 3. Logical NOT ( not )
+		 ----------------------
+		 	p = True
+			q = False
+			print(not p)
+
+		  Table: 
+		  ------     
+
+		  |   p   |   q   | p AND q | p OR q |
+		  |-------|-------|---------|--------|
+		  | True  | True  |  True   |  True  |
+		  | True  | False |  False  |  True  |
+		  | False | True  |  False  |  True  |
+		  | False | False |  False  |  False |
+
+
+
+
+	d. Membership Operators:
+	------------------------
+		- Membership operators test for membership in a sequence.
+
+		
+
+		 1. In ( in )
+		 ------------
+		 	my_list = [1, 2, 3, 4, 5]
+			print(3 in my_list)   True
+
+		 2. Not in ( not in )
+		 --------------------
+		 	my_list = [1, 2, 3, 4, 5]
+			print(6 not in my_list)   True
+
+
+	e. Assignment Operators:
+	------------------------
+		- Assignment operators are used to assign values to variables.
+
+
+		 1. Add and assign
+		 -----------------
+		 	x = 10
+			x += 5   # Equivalent to x = x + 5
+
+		 2. Subtract and assign
+		 ----------------------
+		 	x = 5
+			x -= 3   # Equivalent to x = x - 3
+
+		 3. Multiply and assign
+		 ----------------------
+		 	x = 4
+			x *= 2   # Equivalent to x = x * 2
+
+		 4. Divide and assign
+		 --------------------
+		 	x = 5
+			x /= 4   # Equivalent to x = x / 4
+
+			print(x)   
+
+
+	f. Identity Operators:
+	----------------------
+		- Identity operators are used to compare the objects, not if they are equal, 
+		  but if they are actually the same object.
+		- Checks if two variables are referring to the exact same object in the computer's memory, 
+		  not just objects that happen to look the same. 
+		- The 'is' operator checks for the identity of the objects, not just their content or appearance.
+		
+		a = [1, 2, 3]
+		b = a
+
+		 1. is
+		 -----
+		 print(a is b) 
+
+		 2. is not
+		 ---------
+		 print(a is not b) 
+
+
+	g. Bitwise Operators:
+	---------------------
+		- Bitwise operators perform operations on binary representations of integers.
+
+		
+
+		 1. Bitwise AND ( & )
+		 -------------- 
+
+		 	p = 5   binary: 0101
+		  q = 3   binary: 0011
+                      0001
+                      
+
+			print(p & q)
+
+			Expl: For each corresponding pair of bits, if both are 1, the result is 1; otherwise, it's 0.
+			----
+
+		 2. Bitwise OR ( | )
+		 -------------------
+		 	p = 5   binary: 0101
+		  q = 3   binary: 0011
+			print(p | q)    0111
+
+			Expl: For each corresponding pair of bits, if at least one is 1, the result is 1.
+			-----
+
+		 3. Bitwise XOR ( ^ )
+		 --------------------
+		 	p = 5   binary: 0101
+		  q = 3   binary: 0011
+
+
+			print(p ^ q)
+
+			Expl: For each corresponding pair of bits, the result is 1 if the bits are different; otherwise, it's 0.
+			-----
+
+		 4. Bitwise NOT ( ~ )
+		 --------------------
+			print(~p)   
+
+
+Note: 
+
+	'=='' is for value equality. It's used to know if two objects have the same value.
+	'is'  is for reference equality. It's used to know if two references refer (or point) to the same object, 
+        i.e if they're identical. 
+	      Two objects are identical if they have the same memory address.
+	      is statement is like checking id(a) == id(b)
+	      Consider mutable and immutable
+
+	Examples:
+	---------
+
+	mutable objects:
+	----------------
+		a = []
+		b = []
+		print(a is b)
+		print(id(a))
+		print(id(b))
+		print(a==b)
+
+	immutable objects:
+	----------------
+		a = ''
+		b = ''
+		print(a is b)
+		print(id(a))
+		print(id(b))
+		print(a==b)
+
+
+
+***************************************************************************************************
+
+III. Operators precedence
+-------------------------
+
+	- Operator precedence determines the order in which operators are evaluated in an expression. 
+	- It defines the hierarchy of operators, ensuring that some operators are evaluated before others.
+
+
+
+
+		Parentheses                             : ()
+		Exponentiation                          : **
+		Unary plus and minus                    : +x, -x
+		Multiplication, division, and remainder : *, /, //, %
+		Addition and subtraction                : +, -
+		Bitwise shifts                          : <<, >>
+		Bitwise AND                             : &
+		Bitwise XOR                             : ^
+		Bitwise OR                              : |
+		Comparison operators                    : <, <=, >, >=, ==, !=
+		Membership operators                    : in, not in
+		Identity operators                      : is, is not
+		Logical NOT                             : not
+		Logical AND                             : and
+		Logical OR                              : or
+
+
+		Example:
+		--------
+		
+		result = 6 + 7 * 4 ** 2 - (8 % 3)
+
+		Exponentiation : 4 ** 2 evaluates to 16.
+		Multiplication : 7 * 16 evaluates to 112.
+		Addition       : 6 + 112 evaluates to 118.
+		Remainder      : 8 % 3 evaluates to 2.
+		Parentheses    : (8 % 3) is now 2.
+		Subtraction    : 118 - 2 evaluates to 116.

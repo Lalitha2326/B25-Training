@@ -1,0 +1,67 @@
+2.2 Memory Management in Python:
+================================
+
+  I. Introduction
+ II. Key Features
+III. Garbage Collection in Python
+
+***************************************************************************************************
+I. Introduction:
+----------------
+
+   - Memory management in Python involves the allocation and deallocation of 
+     memory space for objects during program execution. 
+   - Python uses a private heap space to manage memory, and the Python memory manager 
+     handles the dynamic storage needed by the program.
+
+***************************************************************************************************
+II. Key Features:
+-----------------
+
+   a. Memory Allocation:
+   ---------------------
+      - When an object is created in Python, the memory manager allocates space for that object on the heap. 
+        The size of the memory block allocated depends on the type and structure of the object.
+
+   b. Reference Counting:
+   ----------------------
+      - Python uses a reference counting mechanism to keep track of the number of references to each object. 
+        Each object has a reference count associated with it, and when the count drops to zero, 
+        the memory occupied by the object can be reclaimed.
+
+   c. Garbage Collection:
+   ----------------------
+      - While reference counting is a fundamental part of memory management in Python, 
+        it may not handle cyclic references (when objects reference each other in a cycle). 
+        To address this, Python employs a garbage collector to identify and collect unreachable objects.
+        
+***************************************************************************************************
+III. Garbage Collection in Python:
+----------------------------------
+
+   - Python's garbage collector is responsible for reclaiming memory occupied by objects that are no longer in use. 
+   - The garbage collection process is automatic and transparent to the programmer.
+
+      a. Cyclic Garbage Collection:
+      -----------------------------
+         - Python uses a cyclic garbage collector that can identify and collect cyclic references, 
+           preventing memory leaks that might occur if cyclic references were not properly handled.
+
+      b. Generational Garbage Collection:
+      -----------------------------------
+         - Python's garbage collector uses a generational approach, 
+           dividing objects into three generations: young, middle-aged, and old. 
+         - New objects are initially allocated in the young generation, and if they survive a 
+           garbage collection cycle, they are promoted to older generations.
+
+      c. Reference Counting + Garbage Collection:
+      -------------------------------------------
+         - Python's memory management combines reference counting with garbage collection. 
+         - Reference counting handles short-term memory management, while garbage collection handles 
+           long-term memory management and cyclic references.
+
+      d. `gc` Module:
+      ---------------
+         - Python provides the `gc` module, which allows for manual control and fine-tuning of the garbage collection process. 
+         - While automatic garbage collection is generally effective, the `gc` module can be used to trigger collections,
+           disable collections, or obtain information about the garbage collector's behavior.

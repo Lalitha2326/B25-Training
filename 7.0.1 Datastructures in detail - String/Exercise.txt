@@ -1,0 +1,7 @@
+1. Explain about string. 
+2. Multi line string 
+3. String is Immutable.Explain in detail 
+4. CRUD Operations on String
+5. Sequence operations on String
+6. Memory allocation of String 
+7. Explain 20 important functions of String
